@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <div class="title-section">
+                <h1>🐍 Snake Game</h1>
+                <button class="pause-btn" id="pauseBtn" style="display: none;">⏸️ Pause</button>
+            </div>
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-label">Score</div>
+                    <div class="stat-value" id="score">0</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">High Score</div>
+                    <div class="stat-value" id="highScore">0</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Time</div>
+                    <div class="stat-value" id="time">00:00</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Level</div>
+                    <div class="stat-value" id="level">1</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas"></canvas>
+            <div class="game-over" id="gameOver">
+                <h2>🎮 Game Over!</h2>
+                <p class="final-stat">Score: <span id="finalScore">0</span></p>
+                <p class="final-stat">Level: <span id="finalLevel">1</span></p>
+                <p class="final-stat">Time: <span id="finalTime">00:00</span></p>
+                <button class="btn" id="restartBtn">🔄 Play Again</button>
+            </div>
+            <div class="start-screen" id="startScreen">
+                <h2>🐍 Welcome to Snake Game!</h2>
+                <p>🎯 Eat food to grow and score points</p>
+                <p>⚡ Speed increases every 5 points</p>
+                <p>🎮 Use arrow keys or buttons to move</p>
+                <p>⏸️ Press SPACE to pause</p>
+                <button class="btn" id="startBtn">🚀 Start Game</button>
+            </div>
+            <div class="pause-screen" id="pauseScreen">
+                <h2>⏸️ Paused</h2>
+                <p>Press SPACE or click button to continue</p>
+                <button class="btn" id="resumeBtn">▶️ Resume</button>
+            </div>
+        </div>
+
+        <div class="controls" id="mobileControls">
+            <div class="control-buttons">
+                <button class="control-btn" id="upBtn">↑</button>
+                <div class="control-row">
+                    <button class="control-btn" id="leftBtn">←</button>
+                    <button class="control-btn" id="downBtn">↓</button>
+                    <button class="control-btn" id="rightBtn">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
